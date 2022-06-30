@@ -9,17 +9,17 @@
 </script>
 
 <template>
-  <nav>
+  <nav class="navigation">
     <img alt="Logo Astropolite" src="../assets/Logo_Texte.svg">
-    <h3>Communauté</h3>
-    <h3>Évènements</h3>
-    <h3>Actualités</h3>
+    <h3 class="navigationLinks">Communauté</h3>
+    <h3 class="navigationLinks">Évènements</h3>
+    <h3 class="navigationLinks">Actualités</h3>
     <InputButton name="Se connecter" />
   </nav>
 </template>
 
 <style>
-nav {
+.navigation {
   display: flex;
   justify-content: space-around;
   flex-direction: row;
@@ -27,7 +27,7 @@ nav {
   height: 72px;
 }
 
-h3 {
+.navigationLinks{
   font-family: 'Montserrat', sans-serif;
 }
 
