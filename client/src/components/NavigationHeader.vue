@@ -28,7 +28,9 @@
 }
 
 .navigationLinks{
+  display: inline-block;
   font-family: 'Montserrat', sans-serif;
+  color: #14213D;
 }
 
 </style>
