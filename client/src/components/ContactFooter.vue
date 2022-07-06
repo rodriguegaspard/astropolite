@@ -28,14 +28,6 @@
    src: url('../assets/PinotGrigioModernMedium.ttf') format('truetype');
   } 
 
-  body {
-    margin: 0;
-  }
-
-  h2, h3 {
-    font-family: 'Montserrat', sans-serif;
-  }
-
   .footerText {
     color: white;
     font-family: 'PinotGrigio' sans-serif;
