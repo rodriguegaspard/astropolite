@@ -24,18 +24,19 @@
 <style>
 
   @font-face {
-   font-family: 'PinotGrigio' ;
+   font-family: 'Pinot' ;
    src: url('../assets/PinotGrigioModernMedium.ttf') format('truetype');
   } 
 
   .footerText {
     color: white;
-    font-family: 'PinotGrigio' sans-serif;
+    font-family: 'Pinot';
     font-size: 200%;
   }
 
   .footerTitle {
     font-size: 250%;
+    font-family: 'Pinot';
   }
 
   .socialMediaLinks {
@@ -49,17 +50,25 @@
     flex-direction: row;
     justify-content: center;
     padding: 30px 0px;
-    width: 100vw;
   }
 
   .legalMentions {
     display: flex;
     background-color: #14213D;
     justify-content: space-around;
-    flex-direction: row;
     align-items: center;
     padding: 30px 0px;
     margin: 0px 0px;
-    width: 100vw;
   }
+
+  .legalMentions > * {
+    flex-grow: 1;
+    flex-basis: 200px;
+    text-align: center;
+  }
+
+  .legalMentions > img {
+    height: 150px;
+  }
+
 </style>

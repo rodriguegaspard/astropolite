@@ -22,7 +22,9 @@
     </div>
     <div class="articleDiv">
       <h2 class="articleTitle">{{ title }}</h2>
-      <slot class="articleText" />
+      <p class="articleText">
+        <slot />
+      </p>
       <InputButton :name="this.buttonName" />
     </div>
   </div>
@@ -37,13 +39,15 @@
   }
 
   .articleItem:nth-child(odd){
-    flex-direction: row;
-    justify-content: flex-start;
+    flex-direction: row-reverse;
+  }
+
+  .articleItem:nth-child(odd) > .articleDiv {
+    align-items: flex-end;
   }
 
   .articleItem:nth-child(even){
-    flex-direction: row-reverse;
-    justify-content: flex-end;
+    flex-direction: row;
   }
 
   .articleDiv {
@@ -52,13 +56,13 @@
   }
 
   .articleDiv > * {
-    margin: 20px 0px
+    margin: 20px 0px;
+    align-items: flex-start;
   }
 
   .articleTitle {
-    font-family: 'PinotGrigio' sans-serif;
+    font-family: 'Pinot';
     font-size: 200%;
-
   }
 
   .articleText {
@@ -68,7 +72,10 @@
   .articlePicture {
     border-radius: 25px;
     border-style: none;
-    object-fit: contain;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    margin: 20px;
   }
 
 </style>

@@ -3,12 +3,16 @@
 const ENG_RSS = 'https://www.nasa.gov/rss/dyn/breaking_news.rss'
 //const FR_RSS = "https://www.youtube.com/feeds/videos.xml?channel_id=UCDC6DBi0kRp6Jk21xqfvFLA"
 
-//import NewsItem from './NewsItem.vue';
+import NewsItem from './NewsItem.vue';
 
 export default {
   data: () => ({
     newsList: []
   }),
+
+  components: {
+    NewsItem
+  },
 
   created() {
     this.fetchNews(ENG_RSS);
@@ -20,13 +24,13 @@ export default {
           `https://api.allorigins.win/get?url=${rssUrl}`
          );
         const { contents } = await res.json();
-        console.log(contents);
         const feed = new window.DOMParser().parseFromString(contents, "text/xml");
         const items = feed.querySelectorAll("item");
         this.newsList = [...items].map((el) => ({
           link: el.querySelector("link").innerHTML,
           title: el.querySelector("title").innerHTML,
           description: el.querySelector("description").innerHTML,
+          newsDate: el.querySelector("pubDate").innerHTML
         }));
       },
     }, 
@@ -35,14 +39,17 @@ export default {
 
 <template>
   <div class="newsContainer">
+  <h2 class="newsContainerTitle">Actualités</h2>
       <div v-for="item of newsList" :key="item.title">
-      <h1>{{ item.title }}</h1>
-      <p>{{ item.author }}</p>
-      <p>{{ item. description }}</p>
-      <a :href="item.link">{{ item.link }}</a>
-    </div>
+        <NewsItem :src="require('@/assets/nasa_logo.svg')" alt="Logo de la NASA" :newsDate="item.newsDate" :title="item.title" :description="item.description" :href="item.link"/>
+      </div>
   </div>
 </template>
 
 <style>
+  .newsContainerTitle {
+    font-family: "Pinot";
+    font-size: 300%;
+    margin: 5px 200px;
+  }
 </style>

@@ -19,6 +19,11 @@
 </template>
 
 <style>
+  @font-face {
+    font-family: Pinot;
+    src: url('../assets/PinotGrigioModernMedium.ttf')  format('truetype');
+  }
+
   .gradient {
     display: flex;
     flex-direction: column;
@@ -32,7 +37,7 @@
   }
 
   .bannerTitle {
-    font-family: 'PinotGrigio' sans-serif;
+    font-family: 'Pinot';
     font-size: 300%;
   }
 
