@@ -1,3 +1,13 @@
+## Lancer le prototype
+```bash
+$ git clone https://github.com/rodriguegaspard/astropolite
+$ cd client
+$ npm start serve
+```
+Le projet sera disponible sur localhost:8080
+
+
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
