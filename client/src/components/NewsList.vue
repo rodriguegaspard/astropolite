@@ -33,13 +33,20 @@ export default {
           newsDate: el.querySelector("pubDate").innerHTML
         }));
       },
-    }, 
+    },
   }
 </script>
 
 <template>
   <div class="newsContainer">
-  <h2 class="newsContainerTitle">Actualités</h2>
+    <div class="newsMenu">
+      <h2 class="newsContainerTitle">Actualités</h2>
+      <div class="languageSelection">
+        <b>EN</b>
+        <b>|</b>
+        <b>FR</b>
+      </div>
+    </div>
       <div v-for="item of newsList" :key="item.title">
         <NewsItem :src="require('@/assets/nasa_logo.svg')" alt="Logo de la NASA" :newsDate="item.newsDate" :title="item.title" :description="item.description" :href="item.link"/>
       </div>
@@ -47,9 +54,24 @@ export default {
 </template>
 
 <style>
+
+  .newsMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
   .newsContainerTitle {
     font-family: "Pinot";
     font-size: 300%;
-    margin: 5px 200px;
   }
+
+  .languageSelection {
+    color: orange;
+    display: flex;
+    flex-direction: row;
+    font-size: 200%;
+  }
+
 </style>

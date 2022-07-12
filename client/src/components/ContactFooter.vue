@@ -58,7 +58,6 @@
     justify-content: space-around;
     align-items: center;
     padding: 30px 0px;
-    margin: 0px 0px;
   }
 
   .legalMentions > * {

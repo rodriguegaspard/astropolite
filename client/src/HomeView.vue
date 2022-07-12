@@ -1,6 +1,4 @@
 <script>
-import NavigationHeader from './components/NavigationHeader.vue'
-import ContactFooter from './components/ContactFooter.vue'
 import HomeBanner from './components/HomeBanner.vue'
 import ArticleItem from './components/ArticleItem.vue'
 import ArticleList from './components/ArticleList.vue'
@@ -8,8 +6,6 @@ import NewsList from './components/NewsList.vue'
 
 export default {
   components: {
-    NavigationHeader,
-    ContactFooter,
     HomeBanner,
     ArticleList,
     ArticleItem,
@@ -20,7 +16,6 @@ export default {
 </script>
 
 <template>
-  <NavigationHeader />
   <HomeBanner />
   <ArticleList>
     <ArticleItem title="Une communauté de passionnés" button-name="Rejoignez la communauté" alt="Homme qui regarde le ciel" :src="require('@/assets/Telescope.png')">
@@ -32,7 +27,6 @@ export default {
     </ArticleItem>
   </ArticleList>
   <NewsList />
-  <ContactFooter />
 </template>
 
 <style>

@@ -1,14 +1,19 @@
 <template>
-  <HomeView />
+  <NavigationHeader></NavigationHeader>
+  <RouterView></RouterView>
+  <ContactFooter></ContactFooter>
 </template>
 
 <script>
-import HomeView from './HomeView.vue'
-
+import { RouterView } from 'vue-router'
+import NavigationHeader from './components/NavigationHeader.vue'
+import ContactFooter from './components/ContactFooter.vue'
 export default {
   name: 'App',
   components: {
-    HomeView
+    RouterView,
+    NavigationHeader,
+    ContactFooter
   }
 }
 </script>
