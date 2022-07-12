@@ -2,6 +2,7 @@
 ```bash
 $ git clone https://github.com/rodriguegaspard/astropolite
 $ cd client
+$ npm install
 $ npm start serve
 ```
 Le projet sera disponible sur localhost:8080
